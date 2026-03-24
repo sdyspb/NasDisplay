@@ -3,6 +3,8 @@
   "version": "1.0",
   "chip": "esp32c6",
   "flash_size": "4MB",
+  "erase_first": true,
+  "use_dtr_rts": true,
   "files": [
     {
       "path": "bootloader.bin",
