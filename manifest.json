@@ -5,17 +5,29 @@
   "description": "Firmware for ESP32-C6 NAS display",
   "chip": "esp32c6",
   "firmware": [
-    { "url": "fw/bootloader.bin",   "offset": 0x0,    "filename": "bootloader.bin" },
-    { "url": "fw/partitions.bin",   "offset": 0x8000, "filename": "partitions.bin" },
-    { "url": "fw/firmware.bin",     "offset": 0x10000,"filename": "firmware.bin" }
+    {
+      "url": "bootloader.bin",
+      "offset": 0x0,
+      "filename": "bootloader.bin"
+    },
+    {
+      "url": "partitions.bin",
+      "offset": 0x8000,
+      "filename": "partitions.bin"
+    },
+    {
+      "url": "firmware.bin",
+      "offset": 0x10000,
+      "filename": "firmware.bin"
+    }
   ],
   "builds": [
     {
       "chipFamily": "ESP32-C6",
       "parts": [
-        { "path": "fw/bootloader.bin",   "offset": 0 },
-        { "path": "fw/partitions.bin",   "offset": 0x8000 },
-        { "path": "fw/firmware.bin",     "offset": 0x10000 }
+        { "path": "bootloader.bin", "offset": 0 },
+        { "path": "partitions.bin", "offset": 0x8000 },
+        { "path": "firmware.bin", "offset": 0x10000 }
       ]
     }
   ]
