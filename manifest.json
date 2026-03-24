@@ -6,16 +6,28 @@
   "chip": "esp32c6",
   "firmware": [
     {
-      "url": "https://github.com/sdyspb/NasDisplay/releases/download/v1.0.0/firmware_merged.bin",
-      "filename": "firmware_merged.bin",
-      "type": "merged"
+      "url": "fw/bootloader.bin",
+      "offset": 0x0,
+      "filename": "bootloader.bin"
+    },
+    {
+      "url": "fw/partitions.bin",
+      "offset": 0x8000,
+      "filename": "partitions.bin"
+    },
+    {
+      "url": "fw/firmware.bin",
+      "offset": 0x10000,
+      "filename": "firmware.bin"
     }
   ],
   "builds": [
     {
       "chipFamily": "ESP32-C6",
       "parts": [
-        { "path": "firmware_merged.bin", "offset": 0 }
+        { "path": "fw/bootloader.bin", "offset": 0 },
+        { "path": "fw/partitions.bin", "offset": 0x8000 },
+        { "path": "fw/firmware.bin", "offset": 0x10000 }
       ]
     }
   ]
