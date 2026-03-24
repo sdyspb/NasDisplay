@@ -4,9 +4,9 @@ The device based on the ESP32-C6 with a 1.47" colour display (172×320, landscap
 
 <img width="3757" height="789" alt="image" src="https://github.com/user-attachments/assets/68734e0b-014f-4de9-8966-264bf8557e12" />
 
-**NAS Storage** – used/free space (GB), status, usage bar.
-**Network Interfaces** – IP addresses of network interfaces (eth0, eth1, wifi0), data transfer speeds (arc meters for eth0 and wifi0), and the device name (FQDN).
-**System Status** – CPU load (%), RAM usage, CPU temperature, uptime in days, and a three‑segment meter.
+- **NAS Storage** – used/free space (GB), status, usage bar.
+- **Network Interfaces** – IP addresses of network interfaces (eth0, eth1, wifi0), data transfer speeds (arc meters for eth0 and wifi0), and the device name (FQDN).
+- **System Status** – CPU load (%), RAM usage, CPU temperature, uptime in days, and a three‑segment meter.
 
 Data is received via UART (LVTTL 3.3V) from the NAS server (e.g., an OMV plugin). Screen switching occurs automatically every 10 seconds or by touch (planned for future implementation).
 
