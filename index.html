@@ -68,8 +68,8 @@
         const button = document.getElementById('flash-button');
         const logElement = document.getElementById('log');
 
-        // URL to the manifest file (adjust to your repository path)
-        const manifestUrl = 'https://raw.githubusercontent.com/sdyspb/NasDisplay/main/manifest.json';
+        // Now the manifest is on the same origin as the page
+        const manifestUrl = './manifest.json';
 
         button.addEventListener('click', () => {
             install({
