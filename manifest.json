@@ -1,0 +1,22 @@
+{
+  "name": "NAS Display",
+  "version": "1.0.0",
+  "manufacturer": "sdyspb",
+  "description": "Firmware for ESP32-C6 NAS display",
+  "chip": "esp32c6",
+  "firmware": [
+    {
+      "url": "https://github.com/sdyspb/NasDisplay/releases/download/v1.0.0/firmware_merged.bin",
+      "filename": "firmware_merged.bin",
+      "type": "merged"
+    }
+  ],
+  "builds": [
+    {
+      "chipFamily": "ESP32-C6",
+      "parts": [
+        { "path": "firmware_merged.bin", "offset": 0 }
+      ]
+    }
+  ]
+}
