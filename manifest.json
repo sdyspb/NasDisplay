@@ -1,0 +1,28 @@
+{
+  "name": "NasDisplay",
+  "version": "1.0",
+  "chip": "esp32c6",
+  "flash_size": "4MB",
+  "files": [
+    {
+      "path": "bootloader.bin",
+      "url": "https://github.com/sdyspb/NasDisplay/raw/main/bootloader.bin",
+      "offset": "0x0"
+    },
+    {
+      "path": "partitions.bin",
+      "url": "https://github.com/sdyspb/NasDisplay/raw/main/partitions.bin",
+      "offset": "0x8000"
+    },
+    {
+      "path": "firmware.bin",
+      "url": "https://github.com/sdyspb/NasDisplay/raw/main/firmware.bin",
+      "offset": "0x10000"
+    },
+    {
+      "path": "boot_app0.bin",
+      "url": "https://github.com/sdyspb/NasDisplay/raw/main/boot_app0.bin",
+      "offset": "0xe000"
+    }
+  ]
+}
