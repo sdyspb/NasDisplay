@@ -354,6 +354,7 @@ Component	License	Link
 - ESP‑IDF (Espressif framework)	Apache-2.0	https://github.com/espressif/esp-idf
 - esp_lvgl_port (LVGL port for ESP)	Apache-2.0	https://github.com/espressif/esp-bsp/tree/master/components/esp_lvgl_port
 - cJSON (JSON parser)	MIT	https://github.com/DaveGamble/cJSON
+
 Note: All used components and libraries are open‑source software; their licenses are compatible with GPL‑2.0. The source code of this project, including all modifications, is available in the repository.
 
 ## 12. Hardware Kit Reference
