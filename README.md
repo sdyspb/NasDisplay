@@ -8,7 +8,7 @@ The device based on the ESP32-C6 with a 1.47" colour display (172×320, landscap
 **Network Interfaces** – IP addresses of network interfaces (eth0, eth1, wifi0), data transfer speeds (arc meters for eth0 and wifi0), and the device name (FQDN).
 **System Status** – CPU load (%), RAM usage, CPU temperature, uptime in days, and a three‑segment meter.
 
-Data is received via UART (RS‑232) from the NAS server (e.g., an OMV plugin). Screen switching occurs automatically every 10 seconds or by touch (planned for future implementation).
+Data is received via UART (LVTTL 3.3V) from the NAS server (e.g., an OMV plugin). Screen switching occurs automatically every 10 seconds or by touch (planned for future implementation).
 
 ## 2. Hardware Connection
 ### 2.1. Power
