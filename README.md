@@ -1,7 +1,8 @@
 # User Manual: ESP32-C6 Display for NAS Monitoring
 ## 1. Purpose
 The device based on the ESP32-C6 with a 1.47" colour display (172×320, landscape orientation) is designed to display key parameters of a NAS (Network Attached Storage) and server system information. The interface is built with the LVGL graphics library and provides three screens:
-<img width="1225" height="2541" alt="image" src="https://github.com/user-attachments/assets/a7dbcfb5-cf03-4db7-9a18-5ca24267df7b" />
+
+<img width="3757" height="789" alt="image" src="https://github.com/user-attachments/assets/68734e0b-014f-4de9-8966-264bf8557e12" />
 
 **NAS Storage** – used/free space (GB), status, usage bar.
 **Network Interfaces** – IP addresses of network interfaces (eth0, eth1, wifi0), data transfer speeds (arc meters for eth0 and wifi0), and the device name (FQDN).
