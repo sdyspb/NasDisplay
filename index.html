@@ -12,16 +12,11 @@
             background-color: #1e1e2f;
             color: #f0f0f0;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-        h1 {
-            color: #ffffff;
-        }
-        a {
-            color: #8bc34a;
+        esp-web-install-button {
+            display: inline-block;
+            margin: 20px auto;
+            --esp-tools-button-color: #4caf50;
+            --esp-tools-button-text-color: white;
         }
         #log {
             margin-top: 20px;
@@ -36,39 +31,49 @@
             margin-right: auto;
             color: #ccc;
         }
+        a {
+            color: #8bc34a;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #ffffff;
+        }
     </style>
-    <script type="module">
-        import 'https://unpkg.com/esp-web-tools@latest/dist/web/install-button.js?module';
-
-        const button = document.querySelector('esp-web-install-button');
-        const logElement = document.getElementById('log');
-
-        button.addEventListener('click', () => {
-            logElement.innerText = 'Starting flash...';
-        });
-
-        button.addEventListener('error', (e) => {
-            logElement.innerText = `Error: ${e.detail.message}`;
-        });
-
-        button.addEventListener('progress', (e) => {
-            logElement.innerText = `Progress: ${e.detail}%`;
-        });
-
-        button.addEventListener('success', () => {
-            logElement.innerText = 'Flash completed successfully!';
-        });
-    </script>
 </head>
 <body>
     <div class="container">
         <h1>Flash NAS Display Firmware</h1>
         <p>Click the button below to install the firmware on your ESP32-C6 device.</p>
         <p>Make sure your device is connected via USB and the browser supports WebSerial (Chrome, Edge, Opera).</p>
-        <esp-web-install-button manifest="./manifest.json"></esp-web-install-button>
+        
+        <!-- Web flasher button -->
+        <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
+        
         <div id="log"></div>
         <hr>
         <p>Firmware version: v1.0.0 &nbsp;|&nbsp; <a href="https://github.com/sdyspb/NasDisplay/releases/tag/v1.0.0">Release notes</a></p>
     </div>
+
+    <script type="module">
+        import 'https://unpkg.com/esp-web-tools@latest/dist/web/install-button.js?module';
+        
+        const button = document.querySelector('esp-web-install-button');
+        const logElement = document.getElementById('log');
+        
+        // Optional: listen to events
+        button.addEventListener('install-progress', (event) => {
+            logElement.innerText = `Progress: ${event.detail.progress}%`;
+        });
+        button.addEventListener('install-error', (event) => {
+            logElement.innerText = `Error: ${event.detail.message}`;
+        });
+        button.addEventListener('install-success', () => {
+            logElement.innerText = 'Flash completed successfully!';
+        });
+    </script>
 </body>
 </html>
