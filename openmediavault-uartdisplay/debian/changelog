@@ -1,0 +1,11 @@
+openmediavault-uartdisplay (1.0.0-1) stable; urgency=medium
+
+  * Initial release
+  - UART display daemon for NAS status monitoring
+  - Support for mdadm RAID arrays
+  - Support for btrfs filesystems
+  - Configurable UART settings (device, baudrate)
+  - 10-second update interval
+  - Systemd service integration
+
+ -- PixelNAS <sdyspb@pixelnas.com>  Mon, 30 Mar 2026 00:00:00 +0000

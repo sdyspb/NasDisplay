@@ -1,0 +1,9 @@
+# Daemon and service
+usr/sbin/uartdisplayd.py usr/sbin/
+etc/systemd/system/uartdisplay.service etc/systemd/system/
+
+# Configuration file
+etc/openmediavault/uartdisplay.conf etc/openmediavault/
+
+# Documentation
+usr/share/doc/openmediavault-uartdisplay/README.md usr/share/doc/openmediavault-uartdisplay/

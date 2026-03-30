@@ -1,0 +1,24 @@
+Source: openmediavault-uartdisplay
+Section: admin
+Priority: optional
+Maintainer: PixelNAS <sdyspb@pixelnas.com>
+Build-Depends: debhelper (>= 10), python3, python3-serial, dh-python
+Standards-Version: 4.5.0
+Vcs-Browser: https://github.com/sdyspb/NasDisplay
+Vcs-Git: https://github.com/sdyspb/NasDisplay.git
+
+Package: openmediavault-uartdisplay
+Architecture: all
+Depends: ${python3:Depends}, python3-serial, systemd, btrfs-progs, mdadm, util-linux
+Description: UART Display Daemon for NAS Status
+ This package provides a daemon service that monitors NAS storage arrays
+ (mdadm or btrfs) and displays status information on an embedded UART display.
+ .
+ Features:
+  - Monitors mdadm RAID arrays
+  - Monitors btrfs multi-device filesystems
+  - Displays used/total space and array status
+  - System statistics (CPU, Memory, Temperature, Uptime)
+  - Network interface information with traffic speed
+  - Configurable via /etc/openmediavault/uartdisplay.conf
+  - 10-second update interval (configurable)

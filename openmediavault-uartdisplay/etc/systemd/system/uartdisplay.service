@@ -1,0 +1,24 @@
+[Unit]
+Description=UART Display Daemon for NAS Status
+Documentation=man:uartdisplayd(8)
+After=local-fs.target network.target
+Wants=local-fs.target
+ConditionPathExists=/dev/ttyUSB0
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/uartdisplayd.py
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=uartdisplayd
+
+# Security hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/var/log /run
+
+[Install]
+WantedBy=multi-user.target
